@@ -1,0 +1,10 @@
+.env
+.air.toml
+*.db
+data.sql
+tmp/
+build
+
+!go*
+
+.vercel
