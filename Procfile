@@ -1,1 +1,1 @@
-web: ls bin && ./bin/bisaditas
+web: ls -r bin && ./bin/api
