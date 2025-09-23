@@ -3,6 +3,8 @@ package main
 import (
 	"database/sql"
 	"log"
+	"os"
+	"strconv"
 
 	_ "github.com/Aergiaaa/gin-event/docs"
 	"github.com/Aergiaaa/gin-event/internal/database"
@@ -33,6 +35,13 @@ func main() {
 		log.Println("No .env file found, using default environment variables")
 	}
 
+	port := env.GetEnvInt("PORT", 8080)
+	if herokuPort := os.Getenv("PORT"); herokuPort != "" {
+		if p, err := strconv.Atoi(herokuPort); err == nil {
+			port = p
+		}
+	}
+
 	db, err := sql.Open("sqlite3", "./data.db")
 	if err != nil {
 		log.Fatalf("error opening database: %v", err)
@@ -42,7 +51,7 @@ func main() {
 	models := database.NewModels(db)
 	app := &app{
 		host:      env.GetEnvString("HOST", "localhost"),
-		port:      env.GetEnvInt("PORT", 8080),
+		port:      port,
 		jwtSecret: env.GetEnvString("JWT_SECRET", "secret-123456"),
 		models:    models,
 	}

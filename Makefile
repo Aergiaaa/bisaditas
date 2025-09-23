@@ -9,5 +9,8 @@ build:
 		cp .env build/.env; \
 	fi
 
+heroku-build:
+	@go build -o bisaditas ./cmd/api
+
 exec:
 	@nohup ./build/gin-event &
