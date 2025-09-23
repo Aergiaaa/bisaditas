@@ -1,1 +1,1 @@
-web: ls -r bin && ./bin/api
+web: ./bin/migrate up && ./bin/api
