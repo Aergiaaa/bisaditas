@@ -4,7 +4,8 @@ migrate_down:
 	@go run ./cmd/migrate/main.go down
 
 build:
-	@go build -o build/gin-event ./cmd/api
+	@mkdir -p build
+	@go build -o build/bisaditas ./cmd/api
 	@if [ -f ".env" ]; then \
 		cp .env build/.env; \
 	fi

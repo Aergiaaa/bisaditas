@@ -29,6 +29,17 @@ type app struct {
 	models    database.Models
 }
 
+func runMigrations() {
+	log.Println("Running migrations...")
+
+	err := database.Migrate()
+	if err != nil {
+		log.Printf("error running migrations: %v", err)
+	} else {
+		log.Println("Migrations completed successfully.")
+	}
+}
+
 func main() {
 	err := godotenv.Load()
 	if err != nil {
@@ -47,6 +58,8 @@ func main() {
 		log.Fatalf("error opening database: %v", err)
 	}
 	defer db.Close()
+
+	runMigrations()
 
 	models := database.NewModels(db)
 	app := &app{
