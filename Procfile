@@ -1,1 +1,1 @@
-web: ./bisaditas
+web: ./api

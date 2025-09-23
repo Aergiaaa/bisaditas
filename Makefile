@@ -11,7 +11,7 @@ build:
 	fi
 
 heroku-build:
-	@go build -o bisaditas ./cmd/api
+	@go build ./api
 
 exec:
 	@nohup ./build/gin-event &
