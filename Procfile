@@ -1,1 +1,1 @@
-web: ./build/bisaditas
+web: ./bisaditas

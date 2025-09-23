@@ -1,4 +1,4 @@
-module github.com/Aergiaaa/gin-event
+module github.com/Aergiaaa/bisaditas
 
 go 1.24.5
 
