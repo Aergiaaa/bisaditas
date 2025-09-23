@@ -39,7 +39,10 @@ require (
 	github.com/swaggo/swag v1.16.6
 )
 
-require github.com/joho/godotenv v1.5.1
+require (
+	github.com/Aergiaaa/gin-event v0.0.0-20250809150635-d20dbc0899e6
+	github.com/joho/godotenv v1.5.1
+)
 
 require (
 	github.com/KyleBanks/depth v1.2.1 // indirect

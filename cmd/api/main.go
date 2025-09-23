@@ -6,9 +6,9 @@ import (
 	"os"
 	"strconv"
 
-	_ "github.com/Aergiaaa/gin-event/docs"
-	"github.com/Aergiaaa/gin-event/internal/database"
-	"github.com/Aergiaaa/gin-event/internal/env"
+	_ "github.com/Aergiaaa/bisaditas/docs"
+	"github.com/Aergiaaa/bisaditas/internal/database"
+	"github.com/Aergiaaa/bisaditas/internal/env"
 	"github.com/joho/godotenv"
 
 	_ "github.com/mattn/go-sqlite3"

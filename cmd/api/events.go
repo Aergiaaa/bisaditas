@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/Aergiaaa/gin-event/internal/database"
+	"github.com/Aergiaaa/bisaditas/internal/database"
 
 	"github.com/gin-gonic/gin"
 )

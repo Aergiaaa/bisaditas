@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Aergiaaa/gin-event/internal/database"
+	"github.com/Aergiaaa/bisaditas/internal/database"
 
 	"github.com/gin-gonic/gin"
 )
@@ -21,4 +21,3 @@ func (app *app) getUserFromContext(c *gin.Context) *database.User {
 
 	return user
 }
-
