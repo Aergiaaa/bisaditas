@@ -1,1 +1,2 @@
-web: ./bin/migrate up && ./bin/api
+migrate: ./bin/migrate up
+api: ./bin/api

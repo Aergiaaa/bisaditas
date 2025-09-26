@@ -40,7 +40,6 @@ require (
 )
 
 require (
-	github.com/Aergiaaa/gin-event v0.0.0-20250809150635-d20dbc0899e6
 	github.com/joho/godotenv v1.5.1
 )
 
