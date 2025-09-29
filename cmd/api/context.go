@@ -1,23 +1,23 @@
 package main
 
-import (
-	"github.com/Aergiaaa/bisaditas/internal/database"
+// import (
+// 	"github.com/Aergiaaa/bisaditas/internal/database"
 
-	"github.com/gin-gonic/gin"
-)
+// 	"github.com/gin-gonic/gin"
+// )
 
-func (app *app) getUserFromContext(c *gin.Context) *database.User {
-	var emptyUser database.User
+// func (app *app) getUserFromContext(c *gin.Context) *database.User {
+// 	var emptyUser database.User
 
-	ctxUser, exist := c.Get("user")
-	if !exist {
-		return &emptyUser
-	}
+// 	ctxUser, exist := c.Get("user")
+// 	if !exist {
+// 		return &emptyUser
+// 	}
 
-	user, ok := ctxUser.(*database.User)
-	if !ok {
-		return &emptyUser
-	}
+// 	user, ok := ctxUser.(*database.User)
+// 	if !ok {
+// 		return &emptyUser
+// 	}
 
-	return user
-}
+// 	return user
+// }
